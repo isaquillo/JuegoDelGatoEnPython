@@ -116,7 +116,7 @@ def desea_continuar_juego():
     es_respuesta_valida = False
     continua_juego = True
     while not es_respuesta_valida:
-        respuesta = str(input("Quieres jugar otra partida: "))
+        respuesta = str(input("Quieres jugar otra partida s) Si n) No:  "))
         respuesta.lower()
         if respuesta == "s":
             es_respuesta_valida = True
