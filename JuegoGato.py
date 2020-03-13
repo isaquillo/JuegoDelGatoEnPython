@@ -72,13 +72,14 @@ def juega_turno():
         else:
             print("Ese espacio no está disponible. Vuelve a elegir")
             pausar("continuar")
-
+            es_posicion_valida = False
 
 def verifica_estado_tablero():
     global tablero
     global turnosJugados
     global hayGanador
     global simboloGanador
+    global turnosAgotados
     imprime_tablero()
     if turnosJugados == maxTurnos:
         turnosAgotados = True
@@ -107,7 +108,7 @@ def imprime_resultados():
     if turnosAgotados and not hayGanador:
         print("Empate")
     else:
-        print("Gana el jugador" + simboloGanador)
+        print("Gana el jugador " + simboloGanador)
 
 
 def desea_continuar_juego():
